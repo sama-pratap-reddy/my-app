@@ -2,6 +2,7 @@
     width: 100vw;
     height: 100vh;
     background-color: skyblue;
+    display: flex;
 }
 .left {
     width: 40vw;
@@ -15,6 +16,7 @@
     width: 60vw;
     height: 100vh;
     background-color: teal;
+    background-image: url(R.jfif);
 }
 #login {
     background-color: blue;
