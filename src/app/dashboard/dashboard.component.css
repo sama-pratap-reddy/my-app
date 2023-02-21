@@ -1,17 +1,30 @@
-.parent{
+.parent {
     width: 100vw;
     height: 100vh;
     background-color: red;
+    display: flex;
 
 }
-.left{
+
+.left {
     width: 20vw;
     height: 100vh;
-    background-color: black;
-
+    background-color: gainsboro;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.right{
-    width:80vw;
+
+.right {
+    width: 80vw;
     height: 100vh;
     background-color: teal;
+}
+
+button {
+    width: 90%;
+    background-color: skyblue;
+    border: 0;
+    height: 40%;
+    color: brown;
 }
