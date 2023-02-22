@@ -1,0 +1,33 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.digit{
+    width: 40%;
+    height: 40%;
+    background-color: white;
+    padding: 5%;
+
+}
+input{
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 80%;
+    height: 10%;
+}
+form{ 
+    width: 35vw;
+    height: 40vh;
+}
+button{
+    background-color: skyblue;
+    padding: 5px;
+    margin: 2px;
+    border: 0;
+    border-radius: 10px;
+    /* display: flexbox; */
+    /* justify-content: space-evenly; */
+}
