@@ -1,15 +1,14 @@
 <div class="parent">
     <div class="digit">
         <h4>CALCULATOR</h4>
-        <form action="">
-            <input type="text" placeholder="0"><br>
-            <input type="text" placeholder="0">
-            <input type="text" placeholder="= Result"><br>   
-            <button>Add +</button>
-            <button>Sub -</button>
-            <button>Mul *</button>
-            <button>Div /</button><br>
             
-        </form>
+            <input type="number" placeholder="0"[(ngModel)]="number1"><br>
+            <input type="number" placeholder="0" [(ngModel)]="number2">
+            <input type="number" placeholder="= Result" [(ngModel)]="Result"><br>   
+            <button (click)="sum()">Add +</button>
+            <button (click)="sub()">Sub -</button>
+            <button (click)="mul()">Mul *</button>
+            <button (click)="div()">Div /</button><br>
+            
     </div>
 </div>
