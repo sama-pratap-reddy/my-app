@@ -10,7 +10,6 @@
     width: 20vw;
     height: 100vh;
     background-color: gainsboro;
-    
     align-items: center;
     justify-content: center;
 }
@@ -21,19 +20,23 @@
     background-color: teal;
 }
 
-/* button {
+ button {
     width: 90%;
     background-color: skyblue;
     border: 0;
-    height: 40%;
+    height: 10%;
     color: brown;
-} */
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+} 
 .left h4{
     padding: 20px;
     margin: 0;
     margin-bottom:  5px;
     text-align: center;
 }
+
 .left h4:hover{
 background-color: antiquewhite;
 }

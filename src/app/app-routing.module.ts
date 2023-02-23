@@ -11,10 +11,12 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 const routes: Routes = [
   {path:"login", component:LoginComponent },
   {path:"dashboard",component:DashboardComponent,children:[
-    {path:"home", component:HomeComponent},
-    {path:"data-binding", component:DataBindingComponent},
+    {path:"rectangle", component:RectangleComponent},
     {path:"calculator", component:CalculatorComponent},
-    {path:"rectangle", component:RectangleComponent}
+    {path:"home", component:HomeComponent},
+    {path:"data-binding", component:DataBindingComponent}
+    
+    
   ]},
   {path:"",component:LoginComponent},
   {path:"**", component:PagenotfoundComponent}
