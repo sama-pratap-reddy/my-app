@@ -7,3 +7,12 @@
     display: inline-block;
     text-align: center;
 }
+.minor{
+    color:red;
+    background-color: blue;
+
+}
+.major{
+    color:green;
+    background-color: yellow;
+}

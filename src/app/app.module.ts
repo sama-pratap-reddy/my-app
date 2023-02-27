@@ -14,6 +14,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
 import { TimeComponent } from './time/time.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TimeComponent } from './time/time.component';
     RectangleComponent,
     DirectivesComponent,
     ResistrationFormComponent,
-    TimeComponent
+    TimeComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

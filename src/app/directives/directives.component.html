@@ -11,13 +11,17 @@
     <thead>
         <tr>
             <td>name</td>
-            <td>phone</td>
+            <th>phone</th>
+            <th>marks</th>
+            <th>age</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let user of users">
-            <td>{{user.name}}</td>
+            <td>{{user.name| uppercase}}</td>
             <td>{{user.phone}}</td>
+            <td [ngStyle]="{color:user.marks<35?'red':'green'}">{{user.marks}}</td>
+            <td [ngClass]="{'minor':user.age<18, 'major':user.age>=18}">{{user.age}}</td>
         </tr>
     </tbody>
 </table>
@@ -27,4 +31,15 @@
 <h4>rating:{{product.rating}}</h4>
 <button class="btn btn-success">add cart</button>
 <button class="btn btn-warning">buy now</button>
+
 </div>
+<!----<p>{{users | json}}</p>-->
+<pre>{{users | json}}</pre>
+<h1>{{today}}</h1>
+<h1>{{today|date}}</h1>
+<h1>{{today|date:'yyyy-MM-dd'}}</h1>
+<h1>{{today|date:'yyyy/MM/dd'}}</h1>
+<h1>{{today|date:'medium'}}</h1>
+<h1>{{today|date:'short'}}</h1>
+<h1>{{today|date:'mediumTime'}}</h1>
+<h1>{{today|date:'shortTime'}}</h1>

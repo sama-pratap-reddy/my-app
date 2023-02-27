@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CartComponent } from './cart/cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
       { path: "data-binding", component: DataBindingComponent },
       { path: "directives", component: DirectivesComponent },
       { path: "resistration-form", component: ResistrationFormComponent },
-      {path:"time", component:TimeComponent}
+      {path:"time", component:TimeComponent},
+      {path:"cart",component:CartComponent}
     ]
   },
   { path: "", component: LoginComponent },
