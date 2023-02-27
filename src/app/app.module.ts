@@ -15,6 +15,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
 import { TimeComponent } from './time/time.component';
 import { CartComponent } from './cart/cart.component';
+import { GradeCalculatorComponent } from './grade-calculator/grade-calculator.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CartComponent } from './cart/cart.component';
     DirectivesComponent,
     ResistrationFormComponent,
     TimeComponent,
-    CartComponent
+    CartComponent,
+    GradeCalculatorComponent
   ],
   imports: [
     BrowserModule,
