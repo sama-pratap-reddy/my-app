@@ -8,20 +8,24 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
+import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
+import { TimeComponent } from './time/time.component';
 
 const routes: Routes = [
-  {path:"login", component:LoginComponent },
-  {path:"dashboard",component:DashboardComponent,children:[
-    {path:"rectangle", component:RectangleComponent},
-    {path:"calculator", component:CalculatorComponent},
-    {path:"home", component:HomeComponent},
-    {path:"data-binding", component:DataBindingComponent},
-    {path:"directives", component:DirectivesComponent}
-    
-    
-  ]},
-  {path:"",component:LoginComponent},
-  {path:"**", component:PagenotfoundComponent}
+  { path: "login", component: LoginComponent },
+  {
+    path: "dashboard", component: DashboardComponent, children: [
+      { path: "rectangle", component: RectangleComponent },
+      { path: "calculator", component: CalculatorComponent },
+      { path: "home", component: HomeComponent },
+      { path: "data-binding", component: DataBindingComponent },
+      { path: "directives", component: DirectivesComponent },
+      { path: "resistration-form", component: ResistrationFormComponent },
+      {path:"time", component:TimeComponent}
+    ]
+  },
+  { path: "", component: LoginComponent },
+  { path: "**", component: PagenotfoundComponent }
 ];
 
 @NgModule({

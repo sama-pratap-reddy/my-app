@@ -12,6 +12,8 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { FormsModule } from '@angular/forms';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
+import { TimeComponent } from './time/time.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DirectivesComponent } from './directives/directives.component';
     CalculatorComponent,
     DataBindingComponent,
     RectangleComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    ResistrationFormComponent,
+    TimeComponent
   ],
   imports: [
     BrowserModule,

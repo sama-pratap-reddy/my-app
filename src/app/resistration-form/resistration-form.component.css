@@ -1,0 +1,23 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reg{
+    width: 40%;
+    height: 30%;
+    margin: 10%;
+    background-image: linear-gradient(to right,yellow,teal,lightgreen,lightyellow);
+    text-align: center; 
+}
+button{
+    background-color: aqua;
+    border: 0;
+    margin-top: 10px;
+}
+input{
+    margin-top: 10px;
+}
