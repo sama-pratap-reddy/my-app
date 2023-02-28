@@ -1,0 +1,10 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(right black,gray,silver);
+}
+img{
+    width: 60%;
+    height: 40%;
+    box-shadow: 10px 10px 10px lightsteelblue;
+}

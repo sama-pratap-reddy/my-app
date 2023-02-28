@@ -1,0 +1,28 @@
+<!-- <div class="parent">
+<p>select a car</p>
+<div>
+<label for="car">company</label>
+<input type="radio" name="car"[(ngModel)]="cars">
+<label for="">Audi</label>
+<img src="/assets/audi.jpg" alt="">
+<input type="radio" name="car"[(ngModel)]="cars">
+<label for="">BMW</label>
+<img src="/assets/bmw.jpg" alt="">
+<input type="radio" name="car"[(ngModel)]="cars">
+<label for="">Tesla</label>
+<img src="/assets/tesla.jfif" alt="">
+<input type="radio" name="car"[(ngModel)]="cars">
+<label for="">Volvo</label>
+<img src="/assets/volvo.jpg" alt="">
+</div>
+</div> -->
+<h1>Choose your car</h1>
+<div *ngFor="let car of cars">
+    <label>
+      <input type="radio" name="car" [(ngModel)]="selectedCar" [value]="car.name">
+      {{car.name}}
+    </label>
+  </div>
+  <div *ngFor="let car of cars">
+    <img *ngIf="selectedCar === car.name" [src]="car.image" [alt]="car.name">
+  </div>

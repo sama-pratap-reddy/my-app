@@ -16,6 +16,7 @@ import { ResistrationFormComponent } from './resistration-form/resistration-form
 import { TimeComponent } from './time/time.component';
 import { CartComponent } from './cart/cart.component';
 import { GradeCalculatorComponent } from './grade-calculator/grade-calculator.component';
+import { CarsComponent } from './cars/cars.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { GradeCalculatorComponent } from './grade-calculator/grade-calculator.co
     ResistrationFormComponent,
     TimeComponent,
     CartComponent,
-    GradeCalculatorComponent
+    GradeCalculatorComponent,
+    CarsComponent
   ],
   imports: [
     BrowserModule,
