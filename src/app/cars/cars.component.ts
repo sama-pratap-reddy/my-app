@@ -6,12 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./cars.component.css']
 })
 export class CarsComponent {
-  // public cars:any=[];
-  selectedCar = '';
-  cars = [
-    {name: 'BMW', },
-    // {image: 'asset.bmw.jpg'},
-    {name: 'Audi', image: 'asset.audi.jpg'},
-    {name: 'Tesla', image: 'asset.tesla.jpg'}
-  ];
+   public cars:string="";
+  // selectedCar = '';
+  // cars = [
+  //   {name: 'BMW', image: 'bmw.jpg'},
+  //   {name: 'Audi', image: 'audi.jpg'},
+  //   {name: 'Tesla', image: 'tesla.jpg'}
+  // ];
 }

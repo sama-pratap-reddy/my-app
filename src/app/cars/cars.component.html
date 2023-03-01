@@ -1,22 +1,23 @@
-<!-- <div class="parent">
-<p>select a car</p>
-<div>
-<label for="car">company</label>
-<input type="radio" name="car"[(ngModel)]="cars">
-<label for="">Audi</label>
-<img src="/assets/audi.jpg" alt="">
-<input type="radio" name="car"[(ngModel)]="cars">
-<label for="">BMW</label>
-<img src="/assets/bmw.jpg" alt="">
-<input type="radio" name="car"[(ngModel)]="cars">
-<label for="">Tesla</label>
-<img src="/assets/tesla.jfif" alt="">
-<input type="radio" name="car"[(ngModel)]="cars">
-<label for="">Volvo</label>
-<img src="/assets/volvo.jpg" alt="">
+<div class="parent">
+  <p>select a car</p>
+  <div class="cars">
+    <label for="car">company</label>
+    <input type="radio" name="car" [(ngModel)]="cars" value="audi">
+    <label for="">Audi</label>
+    <input type="radio" name="car" [(ngModel)]="cars" value="bmw">
+    <label for="">BMW</label>
+    <input type="radio" name="car" [(ngModel)]="cars" value="tesla">
+    <label for="">Tesla</label>
+    <input type="radio" name="car" [(ngModel)]="cars" value="volvo">
+    <label for="">Volvo</label>
+    <br><br>
+    <img src="/assets/volvo.jpg" alt="" *ngIf="cars=='volvo'">
+    <img src="/assets/tesla.jfif" alt="" *ngIf="cars=='tesla'">
+    <img src="/assets/bmw.jpg" alt="" *ngIf="cars=='bmw'">
+    <img src="/assets/audi.jpg" alt="" *ngIf="cars=='audi'">
+  </div>
 </div>
-</div> -->
-<h1>Choose your car</h1>
+<!-- <h1>Choose your car</h1>
 <div *ngFor="let car of cars">
     <label>
       <input type="radio" name="car" [(ngModel)]="selectedCar" [value]="car.name">
@@ -25,4 +26,4 @@
   </div>
   <div *ngFor="let car of cars">
     <img *ngIf="selectedCar === car.name" [src]="car.image" [alt]="car.name">
-  </div>
+  </div> -->
