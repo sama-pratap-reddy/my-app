@@ -10,6 +10,7 @@ import { GradeCalculatorComponent } from './grade-calculator/grade-calculator.co
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PhonesComponent } from './phones/phones.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
 import { TimeComponent } from './time/time.component';
@@ -27,7 +28,8 @@ const routes: Routes = [
       { path: "time", component:TimeComponent},
       { path: "cart",component:CartComponent},
       { path: "grade-calculator",component:GradeCalculatorComponent},
-      { path:"cars",component:CarsComponent}
+      { path:"cars",component:CarsComponent},
+      { path:"phones",component:PhonesComponent}
     ]
   },
   { path: "", component: LoginComponent },
