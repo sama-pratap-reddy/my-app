@@ -14,6 +14,8 @@ import { PhonesComponent } from './phones/phones.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
 import { TimeComponent } from './time/time.component';
+import { UsersComponent } from './users/users.component';
+
 
 const routes: Routes = [
   { path: "login", component: LoginComponent },
@@ -29,7 +31,8 @@ const routes: Routes = [
       { path: "cart",component:CartComponent},
       { path: "grade-calculator",component:GradeCalculatorComponent},
       { path:"cars",component:CarsComponent},
-      { path:"phones",component:PhonesComponent}
+      { path:"phones",component:PhonesComponent},
+      {path:"users",component:UsersComponent}
     ]
   },
   { path: "", component: LoginComponent },
