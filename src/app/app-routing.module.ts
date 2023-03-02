@@ -15,6 +15,7 @@ import { RectangleComponent } from './rectangle/rectangle.component';
 import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
 import { TimeComponent } from './time/time.component';
 import { UsersComponent } from './users/users.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
 
 
 const routes: Routes = [
@@ -32,9 +33,10 @@ const routes: Routes = [
       { path: "grade-calculator",component:GradeCalculatorComponent},
       { path:"cars",component:CarsComponent},
       { path:"phones",component:PhonesComponent},
-      {path:"users",component:UsersComponent}
+      { path:"users",component:UsersComponent}
     ]
   },
+  { path: "vehicles",component:VehiclesComponent},
   { path: "", component: LoginComponent },
   { path: "**", component: PagenotfoundComponent }
 ];

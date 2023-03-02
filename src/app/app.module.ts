@@ -20,6 +20,8 @@ import { CarsComponent } from './cars/cars.component';
 import { PhonesComponent } from './phones/phones.component';
 import { UsersComponent } from './users/users.component';
 import{HttpClientModule} from '@angular/common/http';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,9 @@ import{HttpClientModule} from '@angular/common/http';
     GradeCalculatorComponent,
     CarsComponent,
     PhonesComponent,
-    UsersComponent
+    UsersComponent,
+    VehiclesComponent,
+ 
   ],
   imports: [
     BrowserModule,
