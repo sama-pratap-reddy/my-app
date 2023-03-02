@@ -21,6 +21,7 @@ import { PhonesComponent } from './phones/phones.component';
 import { UsersComponent } from './users/users.component';
 import{HttpClientModule} from '@angular/common/http';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { MemesComponent } from './memes/memes.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
     PhonesComponent,
     UsersComponent,
     VehiclesComponent,
+    MemesComponent,
  
   ],
   imports: [

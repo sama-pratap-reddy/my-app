@@ -9,6 +9,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { GradeCalculatorComponent } from './grade-calculator/grade-calculator.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MemesComponent } from './memes/memes.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PhonesComponent } from './phones/phones.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
@@ -37,6 +38,7 @@ const routes: Routes = [
     ]
   },
   { path: "vehicles",component:VehiclesComponent},
+  { path: "memes",component:MemesComponent},
   { path: "", component: LoginComponent },
   { path: "**", component: PagenotfoundComponent }
 ];
