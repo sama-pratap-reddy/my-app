@@ -6,6 +6,7 @@ import { CartComponent } from './cart/cart.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 import { GradeCalculatorComponent } from './grade-calculator/grade-calculator.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
@@ -39,6 +40,7 @@ const routes: Routes = [
   },
   { path: "vehicles",component:VehiclesComponent},
   { path: "memes",component:MemesComponent},
+  {path:"flipkart",component:FlipkartComponent},
   { path: "", component: LoginComponent },
   { path: "**", component: PagenotfoundComponent }
 ];

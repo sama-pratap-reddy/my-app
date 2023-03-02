@@ -1,0 +1,15 @@
+<!-- <pre>{{flipkarts|json}}</pre> -->
+<div class="parent">
+    <div class="child1" *ngFor="let flipkart of flipkarts">
+        <h1><img src="{{flipkart.image}}" alt=""></h1>
+        <div class="text">
+        <h1>{{flipkart.id}}</h1>
+        <h1>{{flipkart.title}}</h1>
+        <h1>{{flipkart.price}}</h1>
+        <h1>{{flipkart.description}}</h1>
+        <h1>{{flipkart.category}}</h1>
+        <h1>{{flipkart.rating.rate}}</h1>
+        <h1>{{flipkart.rating.count}}</h1>
+    </div>
+    </div>
+</div>
