@@ -1,0 +1,23 @@
+/* body{
+    width: 100vw;
+    height: 100vh;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    
+} */
+.parent{
+    width: 100vw;
+    height: auto;
+    background-color: aqua;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+.child1{
+    width: 50vw;
+    height: 50vh;
+    border: 2px solid black;
+    /* display: inline-block; */
+    align-items: center; 
+}
