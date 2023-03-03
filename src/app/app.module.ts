@@ -23,6 +23,7 @@ import{HttpClientModule} from '@angular/common/http';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { MemesComponent } from './memes/memes.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { AccountsComponent } from './accounts/accounts.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
     VehiclesComponent,
     MemesComponent,
     FlipkartComponent,
+    AccountsComponent,
  
   ],
   imports: [

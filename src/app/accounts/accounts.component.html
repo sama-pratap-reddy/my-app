@@ -1,0 +1,60 @@
+<!-- <pre>{{accounts|json}}</pre> -->
+<div class="table table-dark">
+    <table class="bal">
+        <thead>
+            <tr>
+                <th>account name</th>
+                <th>available balance</th>
+                <th>account number</th>
+                <th>id</th>
+                <th>sno</th>
+                <th>Employeeid</th>
+                <th>Employeename</th>
+                <th>Billacilitystatus</th>
+                <th>Location</th>
+                <th>Band</th>
+                <th>Yrsofexp</th>
+                <!-- <th>RollOverhate</th>
+                <th>RollOverQuater</th>
+                <th>PRP</th>
+                <th>Codility</th>
+                <th>Readyfordeploymentskill</th>
+                <th>Profile</th>
+                <th>PropsedCustomer1</th>
+                <th>PropsedCustomer2</th>
+                <th>PropsedCustomer3</th>
+                <th>PropsedCustomer4</th>
+                <th>PropsedCustomer5</th>
+                <th>ReasonforRejection</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of accounts">
+                <td>{{account.account_name}}</td>
+                <td>{{account.vailable_balance}}</td>
+                <td>{{account.account_number}}</td>
+                <td>{{account.id}}</td>
+                <td>{{account.sno}}</td>
+                <td>{{account.EmployeeId}}</td>
+                <td>{{account.EmployeeName}}</td>
+                <td>{{account.BillacilityStatus}}</td>
+                <td>{{account.Location}}</td>
+                <td>{{account.Band}}</td>
+                <td>{{account.Yrsofexp}}</td>
+                <!-- <td>{{account.RollOverdate}}</td>
+                <td>{{account.RollOverQuater}}</td> -->
+                <!-- <td>{{account.PRP}}</td> -->
+                <!-- <td>{{account.Codility}}</td>
+                <td>{{account.ReadyforDeploymentskill}}</td>
+                <td>{{account.Profile}}</td>
+                <td>{{account.PropsedCustomer1}}</td>
+                <td>{{account.PropsedCustomer2}}</td>
+                <td>{{account.PropsedCustomer3}}</td>
+                <td>{{account.PropsedCustomer4}}</td>
+                <td>{{account.PropsedCustomer5}}</td>
+                <td>{{account.ReasonforRejection}}</td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
+
