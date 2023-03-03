@@ -1,0 +1,19 @@
+<!-- <pre>{{mails|json}}</pre> -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let mail of mails"[ngStyle]="{color:mail.completed==true?'gray':'black'}">
+            <td>{{mail.userId}}</td>
+            <td>{{mail.id}}</td>
+            <td>{{mail.title}}</td>
+            <td>{{mail.completed}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -24,6 +24,7 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { MemesComponent } from './memes/memes.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { AccountsComponent } from './accounts/accounts.component';
+import { MailsComponent } from './mails/mails.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { AccountsComponent } from './accounts/accounts.component';
     MemesComponent,
     FlipkartComponent,
     AccountsComponent,
+    MailsComponent,
  
   ],
   imports: [

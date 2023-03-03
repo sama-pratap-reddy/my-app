@@ -11,6 +11,7 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { GradeCalculatorComponent } from './grade-calculator/grade-calculator.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MailsComponent } from './mails/mails.component';
 import { MemesComponent } from './memes/memes.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PhonesComponent } from './phones/phones.component';
@@ -43,6 +44,7 @@ const routes: Routes = [
   { path: "memes",component:MemesComponent},
   {path:"flipkart",component:FlipkartComponent},
   { path:"accounts",component:AccountsComponent},
+  { path:"mails",component:MailsComponent},
   { path: "", component: LoginComponent },
   { path: "**", component: PagenotfoundComponent }
 ];
