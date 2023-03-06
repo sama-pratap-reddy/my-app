@@ -1,4 +1,18 @@
 <!-- <pre>{{vehicles|json}}</pre> -->
+<input type="text"[(ngModel)]="term" (keypress)="filter()">
+<label for="">Column</label>
+<select [(ngModel)]="column">
+    <option>Vechicles</option>
+    <option>fuel</option>
+    <option>manufacturer</option>
+ <option>id</option>
+</select>
+<label for="">Order</label>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button class="btn btn-warning" (click)="sort()">sort</button>
 <div class="parent">
     <div class=" "></div>
 <table class="table table-dark">
@@ -24,7 +38,15 @@
             <td>{{vehicle.color}}</td>
             <td><img src="{{vehicle.image}}" alt=""></td>
             <td>{{vehicle.id}}</td>
+            <td>
+                <button class="btn btn-warning" (click)="delete(vehicles.id)">delete</button>
+            </td>
         </tr>
     </tbody>
 </table>
 </div>
+<ul class="pagination">
+    <li *ngFor="let items of [].constructor(10);let i= index"class="page-item" (click)="page(i+1)"><a class="page-link">{{i+1}}</a></li>
+    <!-- <li class="page-item" (click)="page(2)"><a class="page-link">2</a></li>
+    <li class="page-item" (click)="page(3)"><a class="page-link">3</a></li> -->
+  </ul>

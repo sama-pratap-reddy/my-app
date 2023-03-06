@@ -27,7 +27,6 @@ filter(){
     this._usersService.getFilteredFUsers(this.term).subscribe(
       (data:any)=>{
         this.users = data;
-    
       },
       (err:any)=>{
         alert("internal server error");
@@ -38,7 +37,6 @@ sort(){
   this._usersService.getSortedUsers(this.column,this.order).subscribe(
     (data:any)=>{
       this.users = data;
-  
     },
     (err:any)=>{
       alert("internal server error");
