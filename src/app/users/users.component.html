@@ -1,5 +1,19 @@
 <p>users works!</p>
 <!-- <pre>{{users|json}}</pre> -->
+<input type="text" [(ngModel)]="term" (keypress)="filter()">
+<label for="">Column</label>
+<select [(ngModel)]="column">
+    <option>name</option>
+    <option>phone</option>
+    <option>city</option>
+ <option>id</option>
+</select>
+<label for="">Order</label>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button class="btn btn-warning" (click)="sort()">sort</button>
 <table class="table table-dark">
     <thead>
         <tr>
@@ -17,6 +31,14 @@
             <td>{{user.city}}</td>
             <td><img src="{{user.image}}" alt=""></td>
             <td>{{user.id}}</td>
+            <td>
+                <button class="btn btn-warning" (click)="delete(user.id)">delete</button>
+            </td>
         </tr>
     </tbody>
 </table>
+<ul class="pagination">
+    <li *ngFor="let items of [].constructor(10);let i= index"class="page-item" (click)="page(i+1)"><a class="page-link">{{i+1}}</a></li>
+    <!-- <li class="page-item" (click)="page(2)"><a class="page-link">2</a></li>
+    <li class="page-item" (click)="page(3)"><a class="page-link">3</a></li> -->
+  </ul>
