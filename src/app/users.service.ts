@@ -22,6 +22,9 @@ export class UsersService {
   getPageUsers(page: number, limit: number): Observable<any> {
     return this._httpClient.get(this.URL + "?limit=" + limit + "&page=" + page);
   };
+  createUser(data:any):Observable<any>{
+    return this._httpClient.post(this.URL,data);
+  };
   deleteUser(id:string):Observable<any>{
     return this._httpClient.delete(this.URL+"/"+id);
   }

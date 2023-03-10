@@ -9,7 +9,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { HomeComponent } from './home/home.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
@@ -26,6 +26,7 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { MailsComponent } from './mails/mails.component';
 import { BoredomsComponent } from './boredoms/boredoms.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -51,13 +52,15 @@ import { BoredomsComponent } from './boredoms/boredoms.component';
     AccountsComponent,
     MailsComponent,
     BoredomsComponent,
+    CreateUserComponent,
  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

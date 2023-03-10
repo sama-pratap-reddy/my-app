@@ -1,21 +1,23 @@
-
 <div class="parent">
     <div class="left">
         <div class="child">
             <h3>Login</h3>
-            <form>
-            <label name="email">Email</label><br>
-            <input class="a" type="text" placeholder="Email" name="email"><br><br>
-            <label for="">Password</label><br>
-            <input class="a" type="text" placeholder="Password" width="80%" height="10px"><br><br>
-            <div class="pass">
-            <input type="checkbox">
-            <p>Rember me</p>
-            <p>Forgot Password</p>
-            </div>
+            <form [formGroup]="loginForm">
+                <label name="email">Email</label><br>
+                <input class="a" type="text" placeholder="Email" formControlName="email"><br><br>
+                <label for="">Password</label><br>
+                <input class="a" type="text" placeholder="Password" width="80%" height="10px"
+                    formControlName="password"><br><br>
+                <div class="pass">
+                    <input type="checkbox">
+                    <p>Rember me</p>
+                    <p>Forgot Password</p>
+                </div>
+                <!-- <button id="login" routerLink="/dashboard">login</button><hr> -->
+                <button id="login" (click)="login()">Login</button>
+                <hr>
+                <button id="login">Sing in with google</button>
             </form>
-            <button id="login" routerLink="/dashboard">login</button><hr>
-            <button id="login">Sing in with google</button>
         </div>
     </div>
     <div class="right">

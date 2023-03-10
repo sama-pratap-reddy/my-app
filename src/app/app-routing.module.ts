@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccountsComponent } from './accounts/accounts.component';
+import { AuthenticationGuard } from './authentication.guard';
 import { BoredomsComponent } from './boredoms/boredoms.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CarsComponent } from './cars/cars.component';
 import { CartComponent } from './cart/cart.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
@@ -26,7 +28,7 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   {
-    path: "dashboard", component: DashboardComponent, children: [
+    path: "dashboard",canActivate:[AuthenticationGuard], component: DashboardComponent, children: [
       { path: "rectangle", component: RectangleComponent },
       { path: "calculator", component: CalculatorComponent },
       { path: "home", component: HomeComponent },
@@ -38,6 +40,7 @@ const routes: Routes = [
       { path: "grade-calculator",component:GradeCalculatorComponent},
       { path:"cars",component:CarsComponent},
       { path:"phones",component:PhonesComponent},
+      {path:"create-user",component:CreateUserComponent},
       { path:"users",component:UsersComponent}
     ]
   },
@@ -47,6 +50,7 @@ const routes: Routes = [
   { path:"accounts",component:AccountsComponent},
   { path:"mails",component:MailsComponent},
   {path:"boredoms",component:BoredomsComponent},
+ 
   { path: "", component: LoginComponent },
   { path: "**", component: PagenotfoundComponent }
 ];
