@@ -6,6 +6,7 @@ import { BoredomsComponent } from './boredoms/boredoms.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CarsComponent } from './cars/cars.component';
 import { CartComponent } from './cart/cart.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -41,7 +42,8 @@ const routes: Routes = [
       { path:"cars",component:CarsComponent},
       { path:"phones",component:PhonesComponent},
       {path:"create-user",component:CreateUserComponent},
-      { path:"users",component:UsersComponent}
+      { path:"users",component:UsersComponent},
+      {path:"create-student",component:CreateStudentComponent}
     ]
   },
   { path: "vehicles",component:VehiclesComponent},

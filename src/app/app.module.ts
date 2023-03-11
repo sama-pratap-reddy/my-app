@@ -27,6 +27,7 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { MailsComponent } from './mails/mails.component';
 import { BoredomsComponent } from './boredoms/boredoms.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
     MailsComponent,
     BoredomsComponent,
     CreateUserComponent,
+    CreateStudentComponent,
  
   ],
   imports: [
