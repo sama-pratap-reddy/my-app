@@ -1,0 +1,38 @@
+<p>dynamic-form works+form arrays</p>
+<form [formGroup]="dynamicForm">
+    <label for="">type:</label>
+    <label for="">resident</label>
+    <input type="radio" name="type" formControlName="type" value="bus">
+    <label for="">dayscholar</label>
+    <input type="radio" name="type" formControlName="type" value="hostel"><br>
+<div *ngIf="dynamicForm.get('type')?.value=='bus'">
+    <label>bus fee:</label>
+    <input type="text" formControlName="bus">
+    <br>
+</div>
+<div *ngIf="dynamicForm.get('type')?.value=='hostel'">
+    <label for="">hostel fee:</label>
+    <input type="text" formControlName="hostel"><br>
+</div>
+<button class="btn btn-primary"(click)="add()">add</button>
+<div formArrayName="cards">
+    <div *ngFor="let card of CardsFormArray.controls; let i=index">
+        <div formGroupName="{{i}}">
+            <h4>card {{i+1}}</h4>
+            <label>Number:</label>
+            <input type="number" formControlName="number">
+            <br>
+            <label>Expiry:</label>
+            <input type="number" formControlName="expiry">
+            <br>
+            <label>Cvv:</label>
+            <input type="number" formControlName="cvv">
+            <br>
+            <button class="btn btn-danger"(click)="delete(i)">delete</button>
+        </div>
+    </div>
+</div>
+
+    <button class="btn btn-primary"(click)="submit()">submit</button>
+    
+</form>

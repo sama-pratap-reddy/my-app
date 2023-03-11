@@ -11,6 +11,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { GradeCalculatorComponent } from './grade-calculator/grade-calculator.component';
 import { HomeComponent } from './home/home.component';
@@ -43,7 +44,8 @@ const routes: Routes = [
       { path:"phones",component:PhonesComponent},
       {path:"create-user",component:CreateUserComponent},
       { path:"users",component:UsersComponent},
-      {path:"create-student",component:CreateStudentComponent}
+      {path:"create-student",component:CreateStudentComponent},
+      {path:"dynamic-form",component:DynamicFormComponent}
     ]
   },
   { path: "vehicles",component:VehiclesComponent},
