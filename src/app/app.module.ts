@@ -29,6 +29,7 @@ import { BoredomsComponent } from './boredoms/boredoms.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
+import { PenComponent } from './pen/pen.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
     CreateUserComponent,
     CreateStudentComponent,
     DynamicFormComponent,
+    PenComponent,
  
   ],
   imports: [

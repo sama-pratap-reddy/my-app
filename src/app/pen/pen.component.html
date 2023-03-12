@@ -1,0 +1,66 @@
+<p>Product works!</p>
+<form [formGroup]="pen">
+    <label>Name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    <label>Price:</label>
+    <input type="text" formControlName="price">
+    <br>
+    <label>Rating</label>
+    <input type="text" formControlName="rating"><br>
+    <form formGroupName="address">
+        <!-- <label formControlName="adress">Address:</label><br> -->
+        <label>H.No</label>
+        <input type="text" formControlName="hno"><br>
+        <label>City:</label>
+        <input type="text" formControlName="city"><br>
+        <label>Pin:</label>
+        <input type="text" formControlName="pin"><br>
+    </form>
+    <button class="btn btn-warning" (click)="comment()">Add Comment</button>
+    <div formArrayName="comments">
+        <div *ngFor="let card of CommentsFormArray.controls; let i=index">
+            <div formGroupName="{{i}}">
+                <label>Comments:</label><br>
+                <label for="">Person:</label>
+                <input type="text" formControlName="person"><br>
+                <label for="">Message:</label>
+                <input type="text" formControlName="message"><br>
+            </div>
+        </div>
+    </div>
+    <!-- <button class="btn btn-warning" (click)="payment()">Payment</button> -->
+
+    <!-- <select formGroupName="payment">
+            <option name="name"formControlName="name" value="upi">UPI</option>
+            <option name="name" formControlName="name" value="card">card</option>
+        </select><br> -->
+    <form formControlName="payment">
+        <input type="radio" name="payment" formControlName="payment" value="upi">
+        <label>UPI</label>
+        <input type="radio" name="payment" formControlName="payment" value="card">
+        <label>Card</label><br>
+        <!-- <div *ngIf="pen.get('type')?.value=='upi'">
+            <label>UPI ID:</label>
+            <input type="text" formControlName="upi"><br>
+        </div>
+
+        <div formGroupName="card" *ngIf="pen.get('type')?.value=='card'"> -->
+            <div>
+        <div *ngIf="pen.get('payment')?.value=='upi'">
+            <label>UPI ID:</label>
+            <input type="text" formControlName="upi"><br>
+        </div>
+        <div formControlName="card" *ngIf="pen.get('payment')?.value=='card'">
+            <label>card:</label>
+            <label>Number:</label>
+            <input type="number" formControlName="number" value="card"><br>
+            <label>Expiry:</label>
+            <input type="number" formControlName="expiry" value="card"><br>
+            <label>CVV:</label>
+            <input type="number" formControlName="cvv" value="card"><br>
+        </div>
+    </div>
+    </form>
+    <button class="btn btn-primary" (click)="submit()">Submit</button>
+</form>

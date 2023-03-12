@@ -19,6 +19,7 @@ import { LoginComponent } from './login/login.component';
 import { MailsComponent } from './mails/mails.component';
 import { MemesComponent } from './memes/memes.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PenComponent } from './pen/pen.component';
 import { PhonesComponent } from './phones/phones.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
@@ -45,7 +46,8 @@ const routes: Routes = [
       {path:"create-user",component:CreateUserComponent},
       { path:"users",component:UsersComponent},
       {path:"create-student",component:CreateStudentComponent},
-      {path:"dynamic-form",component:DynamicFormComponent}
+      {path:"dynamic-form",component:DynamicFormComponent},
+      {path:"pen",component:PenComponent}
     ]
   },
   { path: "vehicles",component:VehiclesComponent},
