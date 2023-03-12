@@ -7,8 +7,7 @@
     <input type="radio" name="type" formControlName="type" value="hostel"><br>
 <div *ngIf="dynamicForm.get('type')?.value=='bus'">
     <label>bus fee:</label>
-    <input type="text" formControlName="bus">
-    <br>
+    <input type="text" formControlName="bus"><br>
 </div>
 <div *ngIf="dynamicForm.get('type')?.value=='hostel'">
     <label for="">hostel fee:</label>
@@ -20,19 +19,14 @@
         <div formGroupName="{{i}}">
             <h4>card {{i+1}}</h4>
             <label>Number:</label>
-            <input type="number" formControlName="number">
-            <br>
+            <input type="number" formControlName="number"><br>
             <label>Expiry:</label>
-            <input type="number" formControlName="expiry">
-            <br>
+            <input type="number" formControlName="expiry"><br>
             <label>Cvv:</label>
-            <input type="number" formControlName="cvv">
-            <br>
+            <input type="number" formControlName="cvv"><br>
             <button class="btn btn-danger"(click)="delete(i)">delete</button>
         </div>
     </div>
 </div>
-
-    <button class="btn btn-primary"(click)="submit()">submit</button>
-    
+    <button class="btn btn-primary"(click)="submit()">submit</button> 
 </form>
