@@ -35,7 +35,7 @@
             <option name="name"formControlName="name" value="upi">UPI</option>
             <option name="name" formControlName="name" value="card">card</option>
         </select><br> -->
-    <form formControlName="payment">
+
         <input type="radio" name="payment" formControlName="payment" value="upi">
         <label>UPI</label>
         <input type="radio" name="payment" formControlName="payment" value="card">
@@ -51,7 +51,7 @@
             <label>UPI ID:</label>
             <input type="text" formControlName="upi"><br>
         </div>
-        <div formControlName="card" *ngIf="pen.get('payment')?.value=='card'">
+        <div formGroupName="card" *ngIf="pen.get('payment')?.value=='card'">
             <label>card:</label>
             <label>Number:</label>
             <input type="number" formControlName="number" value="card"><br>
@@ -61,6 +61,5 @@
             <input type="number" formControlName="cvv" value="card"><br>
         </div>
     </div>
-    </form>
     <button class="btn btn-primary" (click)="submit()">Submit</button>
 </form>

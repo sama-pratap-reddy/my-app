@@ -19,14 +19,31 @@
         <div formGroupName="{{i}}">
             <h4>card {{i+1}}</h4>
             <label>Number:</label>
-            <input type="number" formControlName="number"><br>
+            <input type="number" formControlName="number">
+            <div class="text-danger" *ngIf="CardsFormArray.controls[i]?.get('number')?.invalid && CardsFormArray.controls[i]?.get('number')?.touched">
+                <p *ngIf="CardsFormArray.controls[i]?.get('number')?.errors?.['required']">card is required</p>
+                <p *ngIf="CardsFormArray.controls[i]?.get('number')?.errors?.['min']">card number should min and max 12 digits</p>
+                <p *ngIf="CardsFormArray.controls[i]?.get('number')?.errors?.['max']">card number should min and max 12 digitss</p>
+        
+            </div><br>
             <label>Expiry:</label>
-            <input type="number" formControlName="expiry"><br>
+            <input  id="dateInput" [min]="2023-02-02" type="date" formControlName="expiry"><br>
             <label>Cvv:</label>
-            <input type="number" formControlName="cvv"><br>
+            <input type="number" formControlName="cvv">
+            <div class="text-danger" *ngIf="CardsFormArray.controls[i]?.get('cvv')?.invalid && CardsFormArray.controls[i]?.get('cvv')?.touched">
+                <p *ngIf="CardsFormArray.controls[i]?.get('cvv')?.errors?.['required']">card is required</p>
+                <p *ngIf="CardsFormArray.controls[i]?.get('cvv')?.errors?.['min']">card cvv should min and max 3 digits</p>
+                <p *ngIf="CardsFormArray.controls[i]?.get('cvv')?.errors?.['max']">card cvv should min and max 3 digitss</p>
+        
+            </div><br>
             <button class="btn btn-danger"(click)="delete(i)">delete</button>
         </div>
     </div>
 </div>
     <button class="btn btn-primary"(click)="submit()">submit</button> 
 </form>
+
+
+<script>
+    $("#dateInput").validate();
+</script>

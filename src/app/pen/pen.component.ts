@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup, FormGroupName } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, FormGroupName, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-pen',
@@ -20,18 +20,15 @@ export class PenComponent {
         }
       ),
       comments: new FormArray([]),
-      payment: new FormControl(
+      payment: new FormControl(),
+      upi: new FormControl(),
+      card: new FormGroup(
         {
-          upi: new FormControl(),
-          card: new FormControl(
-            {
-              number: new FormControl(),
-              expiry: new FormControl(),
-              cvv: new FormControl()
-            }
-          )
+          number: new FormControl(),
+          expiry: new FormControl(),
+          cvv: new FormControl(),
         }
-      )
+      ),
     }
   )
   get CommentsFormArray() {

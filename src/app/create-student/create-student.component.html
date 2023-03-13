@@ -1,20 +1,59 @@
 <h2>create-student works!</h2>
 <form [formGroup]="createStudent">
-<label>name:</label>
-<input type="text" formControlName="name">
-<br>
-<label for="">age:</label>
-<input type="text" formControlName="age">
-<br>
-<label for="">email:</label>
-<input type="text" formControlName="email">
-<br>
-<form formGroupName="address">
-<label for="">pin:</label>
-<input type="text" formControlName="pin">
-<br>
-<label for="">state:</label>
-<input type="text" formControlName="state">
-</form>
-<button class="btn btn-primary" (click)="create()">create</button>
+    <label>name:</label>
+    <input type="text" formControlName="name">
+    <br>
+    <div class="text-danger" *ngIf="createStudent.get('name')?.invalid && createStudent.get('name')?.touched">
+        <p *ngIf="createStudent.get('name')?.errors?.['required']">name is required</p>
+        <p *ngIf="createStudent.get('name')?.errors?.['minlength']">name should contain min 3 charecters</p>
+        <p *ngIf="createStudent.get('name')?.errors?.['maxlength']">name should contain max 10 charecters</p>
+
+    </div>
+    <!-- <h6>value:{{createStudent.get('name')?.value}}</h6>
+    <h6>errors:{{createStudent.get('name')?.errors|json}}</h6>
+
+
+    <h6>touched:{{createStudent.get('name')?.touched}}</h6>
+    <h6>untouched:{{createStudent.get('name')?.untouched}}</h6>
+
+    <h6>dirty:{{createStudent.get('name')?.dirty}}</h6>
+    <h6>pristine:{{createStudent.get('name')?.pristine}}</h6>
+
+    <h6>valid:{{createStudent.get('name')?.valid}}</h6>
+    <h6>invalid:{{createStudent.get('name')?.invalid}}</h6> -->
+    <label for="">age:</label>
+    <input type="number" formControlName="age">
+    <br>
+    <div class="text-danger" *ngIf="createStudent.get('age')?.invalid && createStudent.get('age')?.touched">
+        <p *ngIf="createStudent.get('age')?.errors?.['required']">age is required</p>
+        <p *ngIf="createStudent.get('age')?.errors?.['min']">age should min 5 years</p>
+        <p *ngIf="createStudent.get('age')?.errors?.['max']">age should max 10 years</p>
+    </div>
+    <label for="">email:</label>
+    <input type="text" formControlName="email">
+    <br>
+    <div class="text-danger" *ngIf="createStudent.get('email')?.invalid && createStudent.get('email')?.touched">
+        <p *ngIf="createStudent.get('email')?.errors?.['required']">email is required</p>
+        <p *ngIf="createStudent.get('email')?.errors?.['email']">inavalid email format</p>
+    </div>
+    <form formGroupName="address">
+        <label for="">pin:</label>
+        <input type="number" formControlName="pin">
+        <div class="text-danger" *ngIf="createStudent.get('address')?.get('pin')?.invalid && createStudent.get('address')?.get('pin')?.touched">
+            <p *ngIf="createStudent.get('address')?.get('pin')?.errors?.['required']">pin is required</p>
+            <p *ngIf="createStudent.get('address')?.get('pin')?.errors?.['min']">pin should contain min 6 charecters</p>
+            <p *ngIf="createStudent.get('address')?.get('pin')?.errors?.['max']">pin should contain max 6 charecters</p>
+    
+        </div>
+        <br>
+        <label for="">state:</label>
+        <input type="text" formControlName="state">
+        <div class="text-danger" *ngIf="createStudent.get('address')?.get('state')?.invalid && createStudent.get('address')?.get('state')?.touched">
+            <p *ngIf="createStudent.get('address')?.get('state')?.errors?.['required']">state is required</p>
+            <p *ngIf="createStudent.get('address')?.get('state')?.errors?.['minlength']">state should contain min 3 charecters</p>
+            <p *ngIf="createStudent.get('address')?.get('state')?.errors?.['maxlength']">state should contain max 10 charecters</p>
+    
+        </div>
+    </form>
+    <button class="btn btn-primary" (click)="create()">create</button>
 </form>

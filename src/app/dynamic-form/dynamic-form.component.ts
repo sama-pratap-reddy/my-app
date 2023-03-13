@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -22,9 +22,9 @@ export class DynamicFormComponent {
     this.CardsFormArray.push(
       new FormGroup(
         {
-          number: new FormControl(),
+          number: new FormControl("", [Validators.required, Validators.min(100000000000),Validators.max(999999999999)]),
           expiry: new FormControl(),
-          cvv: new FormControl()
+          cvv: new FormControl("", [Validators.required, Validators.min(100),Validators.max(999)])
         }
       )
     )
