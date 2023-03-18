@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AboutCeoComponent } from './about/about-ceo/about-ceo.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { BoredomsComponent } from './boredoms/boredoms.component';
@@ -20,11 +21,13 @@ import { LoginComponent } from './login/login.component';
 import { MailsComponent } from './mails/mails.component';
 import { MemesComponent } from './memes/memes.component';
 import { NavComponent } from './nav/nav.component';
+import { NotifyGuard } from './notify.guard';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ParentComponent } from './parent/parent.component';
 import { PenComponent } from './pen/pen.component';
 import { PhonesComponent } from './phones/phones.component';
 import { ProductComponent } from './product/product.component';
+import { RatingComponent } from './rating/rating.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
 import { TimeComponent } from './time/time.component';
@@ -48,7 +51,7 @@ const routes: Routes = [
       { path: "grade-calculator",component:GradeCalculatorComponent},
       { path:"cars",component:CarsComponent},
       { path:"phones",component:PhonesComponent},
-      {path:"create-user",component:CreateUserComponent},
+      {path:"create-user",component:CreateUserComponent,canDeactivate:[NotifyGuard]},
       {path:"create-user/:id",component:CreateUserComponent},
       { path:"users",component:UsersComponent},
       {path:"create-student",component:CreateStudentComponent},
@@ -58,7 +61,12 @@ const routes: Routes = [
       {path:"parent",component:ParentComponent},
       {path:"product",component:ProductComponent},
       {path:"nav",component:NavComponent},
-      {path:"cartlist",component:CartlistComponent}
+      {path:"cartlist",component:CartlistComponent},
+      {path:"about-ceo",component:AboutCeoComponent},
+      {
+        path: 'contact',
+        loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+      },
     ]
   },
   { path: "vehicles",component:VehiclesComponent},
@@ -67,13 +75,13 @@ const routes: Routes = [
   { path:"accounts",component:AccountsComponent},
   { path:"mails",component:MailsComponent},
   {path:"boredoms",component:BoredomsComponent},
- 
+ {path:"rating",component:RatingComponent},
   { path: "", component: LoginComponent },
   { path: "**", component: PagenotfoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

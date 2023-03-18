@@ -37,6 +37,8 @@ import { ChildComponent } from './child/child.component';
 import { ProductComponent } from './product/product.component';
 import { NavComponent } from './nav/nav.component';
 import { CartlistComponent } from './cartlist/cartlist.component';
+import { RatingComponent } from './rating/rating.component';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [
@@ -72,6 +74,7 @@ import { CartlistComponent } from './cartlist/cartlist.component';
     ProductComponent,
     NavComponent,
     CartlistComponent,
+    RatingComponent,
  
   ],
   imports: [
@@ -82,6 +85,7 @@ import { CartlistComponent } from './cartlist/cartlist.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
