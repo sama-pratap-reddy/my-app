@@ -1,0 +1,8 @@
+
+<p>parent works!</p>
+<input type="number" [(ngModel)]="ap">
+ap:{{ap}}
+bp:{{bp}}
+<app-child [ac]="ap" (bEvent)="catch($event)">
+    <h1>hello</h1>
+</app-child>

@@ -1,4 +1,4 @@
-<p>create-user works!</p>
+<p>{{isEdit?'edit-user':'create-user'}}</p>
 <form [formGroup]="userform">
     <label for="">Name:</label>
     <input type="text" formControlName="name">

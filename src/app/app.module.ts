@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -30,6 +30,13 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 import { PenComponent } from './pen/pen.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewuserComponent } from './viewuser/viewuser.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { ProductComponent } from './product/product.component';
+import { NavComponent } from './nav/nav.component';
+import { CartlistComponent } from './cartlist/cartlist.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +66,12 @@ import { PenComponent } from './pen/pen.component';
     CreateStudentComponent,
     DynamicFormComponent,
     PenComponent,
+    ViewuserComponent,
+    ParentComponent,
+    ChildComponent,
+    ProductComponent,
+    NavComponent,
+    CartlistComponent,
  
   ],
   imports: [
@@ -66,7 +79,9 @@ import { PenComponent } from './pen/pen.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

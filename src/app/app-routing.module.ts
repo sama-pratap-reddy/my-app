@@ -6,6 +6,7 @@ import { BoredomsComponent } from './boredoms/boredoms.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CarsComponent } from './cars/cars.component';
 import { CartComponent } from './cart/cart.component';
+import { CartlistComponent } from './cartlist/cartlist.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -18,14 +19,18 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MailsComponent } from './mails/mails.component';
 import { MemesComponent } from './memes/memes.component';
+import { NavComponent } from './nav/nav.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ParentComponent } from './parent/parent.component';
 import { PenComponent } from './pen/pen.component';
 import { PhonesComponent } from './phones/phones.component';
+import { ProductComponent } from './product/product.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { ResistrationFormComponent } from './resistration-form/resistration-form.component';
 import { TimeComponent } from './time/time.component';
 import { UsersComponent } from './users/users.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { ViewuserComponent } from './viewuser/viewuser.component';
 
 
 const routes: Routes = [
@@ -44,10 +49,16 @@ const routes: Routes = [
       { path:"cars",component:CarsComponent},
       { path:"phones",component:PhonesComponent},
       {path:"create-user",component:CreateUserComponent},
+      {path:"create-user/:id",component:CreateUserComponent},
       { path:"users",component:UsersComponent},
       {path:"create-student",component:CreateStudentComponent},
       {path:"dynamic-form",component:DynamicFormComponent},
-      {path:"pen",component:PenComponent}
+      {path:"pen",component:PenComponent},
+      {path:"viewuser/:id",component:ViewuserComponent},
+      {path:"parent",component:ParentComponent},
+      {path:"product",component:ProductComponent},
+      {path:"nav",component:NavComponent},
+      {path:"cartlist",component:CartlistComponent}
     ]
   },
   { path: "vehicles",component:VehiclesComponent},

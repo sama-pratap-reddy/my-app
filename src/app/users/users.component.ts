@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class UsersComponent {
   public term:string="";
   public column:string=""
   public order:string=""
-constructor(private _usersService:UsersService){
+constructor(private _usersService:UsersService,private _router:Router){
 _usersService.getUsers().subscribe(
   (data:any)=>{
     this.users = data;
@@ -64,5 +65,11 @@ delete(id:string){
     alert("internal serever error");
   }
   )
+}
+view(id:string){
+  this._router.navigateByUrl("dashboard/viewuser/"+id)
+}
+edit(id:string){
+  this._router.navigateByUrl("/dashboard/create-user/"+id);
 }
 }

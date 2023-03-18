@@ -55,5 +55,5 @@
     
         </div>
     </form>
-    <button class="btn btn-primary" (click)="create()">create</button>
+    <button [disabled]="createStudent.invalid" class="btn btn-primary" (click)="create()">create</button>
 </form>

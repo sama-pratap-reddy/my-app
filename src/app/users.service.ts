@@ -12,6 +12,9 @@ export class UsersService {
   getUsers(): Observable<any> {
     return this._httpClient.get(this.URL + "?limit=10&page=1");
   };
+  getuser(id:string):Observable<any>{
+    return this._httpClient.get(this.URL+"/"+id);
+  };
   getFilteredFUsers(term: string): Observable<any> {
     return this._httpClient.get(this.URL + "?filter=" + term);
   };
@@ -24,6 +27,9 @@ export class UsersService {
   };
   createUser(data:any):Observable<any>{
     return this._httpClient.post(this.URL,data);
+  };
+  updateUser(data:any,id:string):Observable<any>{
+    return this._httpClient.put(this.URL+"/"+id,data);
   };
   deleteUser(id:string):Observable<any>{
     return this._httpClient.delete(this.URL+"/"+id);
