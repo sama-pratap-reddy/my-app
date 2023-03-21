@@ -8,7 +8,7 @@
 <tbody>
     <tr *ngFor="let phone of phones">
         <td>{{phone.company}}</td>
-        <td>{{phone.price}}</td>
+        <td appImp>{{phone.price|price}}</td>
     </tr>
 </tbody>
 </table>

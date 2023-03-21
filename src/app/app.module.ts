@@ -39,6 +39,9 @@ import { NavComponent } from './nav/nav.component';
 import { CartlistComponent } from './cartlist/cartlist.component';
 import { RatingComponent } from './rating/rating.component';
 import { AboutModule } from './about/about.module';
+import { PricePipe } from './price.pipe';
+import { ImpDirective } from './imp.directive';
+import { HookComponent } from './hook/hook.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +78,9 @@ import { AboutModule } from './about/about.module';
     NavComponent,
     CartlistComponent,
     RatingComponent,
+    PricePipe,
+    ImpDirective,
+    HookComponent,
  
   ],
   imports: [

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '../user';
 import { UsersService } from '../users.service';
 
 @Component({
@@ -8,17 +9,17 @@ import { UsersService } from '../users.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent {
-  public users:any=[];
+  public users:User[]=[];
   public term:string="";
   public column:string=""
   public order:string=""
 constructor(private _usersService:UsersService,private _router:Router){
 _usersService.getUsers().subscribe(
-  (data:any)=>{
+  (data:User[])=>{
     this.users = data;
 
   },
-  (err:any)=>{
+  (err:User[])=>{
     alert("internal server error");
   }
 )
@@ -26,7 +27,7 @@ _usersService.getUsers().subscribe(
 filter(){
 
     this._usersService.getFilteredFUsers(this.term).subscribe(
-      (data:any)=>{
+      (data:User[])=>{
         this.users = data;
       },
       (err:any)=>{
@@ -36,7 +37,7 @@ filter(){
 }
 sort(){
   this._usersService.getSortedUsers(this.column,this.order).subscribe(
-    (data:any)=>{
+    (data:User[])=>{
       this.users = data;
     },
     (err:any)=>{

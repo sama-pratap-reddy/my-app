@@ -75,7 +75,7 @@ const routes: Routes = [
   { path:"accounts",component:AccountsComponent},
   { path:"mails",component:MailsComponent},
   {path:"boredoms",component:BoredomsComponent},
- {path:"rating",component:RatingComponent},
+  {path:"rating",component:RatingComponent},
   { path: "", component: LoginComponent },
   { path: "**", component: PagenotfoundComponent }
 ];

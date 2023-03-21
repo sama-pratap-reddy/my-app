@@ -1,6 +1,10 @@
 <p>rating works!</p>
-<img src="/assets/1star.jpeg" alt="">
-<img src="/assets/2star.jpeg" alt="">
-<img src="/assets/3star.jpeg" alt="">
-<img src="/assets/4star.jpeg" alt="">
-<img src="/assets/5star.jpeg" alt="">
+
+<div [(ngModel)]="image">
+
+<p *ngIf="1"><img src="/assets/1star.jpeg" alt=""></p>
+<p *ngIf="2"><img src="/assets/2star.jpeg" alt=""></p>
+<p *ngIf="3"><img src="/assets/3star.jpeg" alt=""></p>
+<p *ngIf="4"><img src="/assets/4star.jpeg" alt=""></p>
+<p *ngIf="5"><img src="/assets/5star.jpeg" alt=""></p>
+</div>

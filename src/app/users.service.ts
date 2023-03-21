@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UsersService {
-  public URL: string = "https://62abe711bd0e5d29af16f450.mockapi.io/users"
+  // public URL: string = "https://62abe711bd0e5d29af16f450.mockapi.io/users"
+  public URL: string = "/assets/user.json/";
   constructor(private _httpClient: HttpClient) { }
 
   getUsers(): Observable<any> {

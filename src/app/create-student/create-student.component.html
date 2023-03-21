@@ -35,6 +35,7 @@
     <div class="text-danger" *ngIf="createStudent.get('email')?.invalid && createStudent.get('email')?.touched">
         <p *ngIf="createStudent.get('email')?.errors?.['required']">email is required</p>
         <p *ngIf="createStudent.get('email')?.errors?.['email']">inavalid email format</p>
+        <p *ngIf="createStudent.get('email')?.errors?.['domain']">only @capgemini.com accepted</p>
     </div>
     <form formGroupName="address">
         <label for="">pin:</label>
@@ -52,7 +53,7 @@
             <p *ngIf="createStudent.get('address')?.get('state')?.errors?.['required']">state is required</p>
             <p *ngIf="createStudent.get('address')?.get('state')?.errors?.['minlength']">state should contain min 3 charecters</p>
             <p *ngIf="createStudent.get('address')?.get('state')?.errors?.['maxlength']">state should contain max 10 charecters</p>
-    
+            <p *ngIf="createStudent.get('address')?.get('state')?.errors?.['state']">Select Telangana state</p>
         </div>
     </form>
     <button [disabled]="createStudent.invalid" class="btn btn-primary" (click)="create()">create</button>
